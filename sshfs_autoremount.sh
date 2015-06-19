@@ -1,6 +1,9 @@
 #!/bin/dash
 #title           :sshfs_autoremount.sh
-#description     :simple script to make live or force remount every 10 sec. Used with sftp host by gandi.
+#description     :
+# simple script to make live or force remount every 10 sec.
+# so you can have a persistent cnx.
+# Used with sftp host by gandi.
 #author          :christophe.prigent_AT_gmail.com
 #date            :20150619
 #version         :0.1
@@ -19,9 +22,7 @@ REMOTE_DIR_TO_CHECK='i_am_use_in_ls'
 
 alias _remount="$BIN_SSHFS $USER@$HOST:$REMOTE_DIR_TO_MOUNT $MOUNT_POINT; cd ."
 
-alias _remount
-
 while [ 42 ];do
-    ls -d "$MOUNT_POINT/$REMOTE_DIR_TO_CHECK/" > /dev/null && echo "live OK" || ( _remount && echo "auto remount" )
+    ls -d "$MOUNT_POINT/$REMOTE_DIR_TO_CHECK/" > /dev/null 2>&1 && echo "live OK" || ( _remount && echo "auto remount" )
     $BIN_SLEEP $SEC_TO_SLEEP
 done

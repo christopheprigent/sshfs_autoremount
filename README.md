@@ -13,7 +13,7 @@
                USER='sftp_user'
                HOST='sftp_host'
 REMOTE_DIR_TO_MOUNT='/'
-REMOTE_DIR_TO_CHECK='i_am_use_in_ls'
+REMOTE_DIR_TO_CHECK='i_am_used_in_ls'
        SEC_TO_SLEEP=10
 ```
 

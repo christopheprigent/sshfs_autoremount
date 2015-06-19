@@ -1,8 +1,9 @@
 # sshfs_autoremount
  simple script to make live or force remount every 10 sec.                                                                                   
  so you can have a persistent cnx.                                                                                                           
- Used with sftp host by gandi.
- NB : you have to configure ssh private key to enable remount auto.
+ Tried with sftp host by gandi. 
+
+ you will have to configure ssh private key to enable remount auto.
 
 ## Config
  open sshfs_autoremount.sh and change variables :

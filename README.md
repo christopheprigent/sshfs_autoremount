@@ -6,7 +6,7 @@
  you will have to configure ssh private key to enable remount auto.
 
 ## Config
- open sshfs_autoremount.sh and change variables :
+ open settings.dist.cfg change variables :
 ```vars
           BIN_SSHFS='/usr/bin/sshfs'
           BIN_SLEEP='/bin/sleep'
@@ -17,6 +17,7 @@ REMOTE_DIR_TO_MOUNT='/'
 REMOTE_DIR_TO_CHECK='i_am_used_in_ls'
        SEC_TO_SLEEP=10
 ```
+and save it to settings.cfg
 
 ## Command line usage
  just run sshfs_autoremount.sh
